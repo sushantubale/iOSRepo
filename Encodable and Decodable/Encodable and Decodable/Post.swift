@@ -14,11 +14,4 @@ struct posts: Encodable, Decodable {
     let message: String
     let username: String
     let password: String
-    
-//    init(userid: String, message: String, username: String, password: String) {
-//        self.userid = userid
-//        self.message = message
-//        self.password = password
-//        self.username = username
-//    }
 }
