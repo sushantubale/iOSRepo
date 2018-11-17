@@ -21,13 +21,11 @@ class ViewController: UIViewController {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-
         let newPosts = posts(userid: "123", message: "Hello this is Sushant", username: "sushant", password: "password")
         do {
             let values = try JSONEncoder().encode(newPosts)
-
             request.httpBody = values
-            
+
         }catch {print(error)}
         
         let session = URLSession.shared
@@ -41,19 +39,13 @@ class ViewController: UIViewController {
                     print(json)
                 }catch {
                     print(error)
-                    
                 }
             }
-            
             if let response = response {
                 print(response)
-                
             }
-            
-            
-        }.resume()
-
-        
+  
+            }.resume()
     }
 }
 
