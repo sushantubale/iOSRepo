@@ -27,7 +27,7 @@ func mostCommonElement(array: [String]) -> (String, Int) {
     }
     return (mostOccuredColor, mostOccured!)
 }
-print(mostCommonElement(array: arrayOfColors))
+// print(mostCommonElement(array: arrayOfColors))
 
 
                 // ***************Two-Sum Problem *************** //
@@ -80,6 +80,31 @@ func findCompliment(_ fArray: [Int],_ fValue: Int) -> (Bool,Int) {
     return  (true, indexValue)
     
 }
-print(binarySearchSearch(array: arrayOfNumbers, value: 15))
+//print(binarySearchSearch(array: arrayOfNumbers, value: 15))
 
+
+
+// *************** Factorial *************** //
+
+func normalFacial(num: UInt) -> UInt {
+    
+    var product: UInt = 1
+    for i in 1...num {
+        product = product * i
+    }
+    return product
+}
+
+//print(normalFacial(num: 3))
+
+func recursiveFactorial(num: UInt) -> UInt {
+    
+    if num == 0 {
+        return 1
+    }
+    return num * recursiveFactorial(num: num - 1)
+    
+}
+
+print(recursiveFactorial(num: 5))
 
