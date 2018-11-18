@@ -106,5 +106,47 @@ func recursiveFactorial(num: UInt) -> UInt {
     
 }
 
-print(recursiveFactorial(num: 5))
+//print(recursiveFactorial(num: 5))
+
+// *************** Wrapping an Array *************** //
+
+var trackList = ["a", "b", "c", "d", "e"]
+var selectedTrack = "d"
+var newTrackList = [String]()
+var remainingTrackList = [String]()
+
+for track in trackList {
+    if track == selectedTrack || newTrackList.count > 0 {
+        newTrackList.append(track)
+    }
+    else {
+        remainingTrackList.append(track)
+    }
+    let finalTrackList = newTrackList + remainingTrackList
+    //print(finalTrackList)
+}
+
+// *************** Flattening Nested Arrays using Recursion ***************
+
+
+func flattenedArray(values: [Any]) -> [Any] {
+    
+    var myFlattenedArray = [Any]()
+    for value in values {
+        if value is Int {
+            myFlattenedArray.append(value)
+        } else if value is [Any] {
+            
+            let recursiveValues = flattenedArray(values: value as! [Any])
+            for num in recursiveValues {
+                myFlattenedArray.append(num)
+                
+            }
+            
+        }
+    }
+    
+    return myFlattenedArray
+}
+// print(flattenedArray(values: [1,[2]]))
 
