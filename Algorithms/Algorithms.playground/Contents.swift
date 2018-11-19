@@ -150,3 +150,33 @@ func flattenedArray(values: [Any]) -> [Any] {
 }
 // print(flattenedArray(values: [1,[2]]))
 
+func findPalindrome(sentence: String) -> String {
+    
+    let words = sentence.components(separatedBy: " ")
+    
+    words.forEach { (word) in
+        
+        let isPalindromeWord = isPalindrome(word: word)
+        print("\(isPalindromeWord) - \(word)")
+    }
+    return ""
+}
+
+func isPalindrome(word: String) -> Bool {
+    
+    var currentIndex = 0
+    var charactersArray = Array(word)
+    
+    while currentIndex < (word.characters.count) / 2 {
+        
+        
+        if charactersArray[currentIndex] == charactersArray[word.characters.count - currentIndex - 1] {
+            return true
+        }
+        
+        
+        currentIndex += 1
+    }
+    return false
+}
+print(findPalindrome(sentence: "madam anna kayak isnotapalindrome racecar"))
