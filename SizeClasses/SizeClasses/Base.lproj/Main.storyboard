@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeClasses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-6f-67m">
+                                <rect key="frame" x="0.0" y="832" width="56" height="30"/>
+                                <state key="normal" title="Forward"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-0k-suE">
+                                <rect key="frame" x="346" y="832" width="68" height="30"/>
+                                <state key="normal" title="Backward"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T5T-bC-U9G">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="JvY-gq-mhY"/>
+                                    <constraint firstAttribute="width" constant="240" id="pjN-9s-XeR"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjR-hd-H0f">
+                                <rect key="frame" x="211" y="363" width="526" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T5T-bC-U9G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Fb-uK-mDl"/>
+                            <constraint firstItem="T5T-bC-U9G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Aqt-Hl-Msw"/>
+                            <constraint firstItem="WjR-hd-H0f" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Gcp-jg-vqa"/>
+                            <constraint firstItem="hUc-6f-67m" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IoZ-3a-Bj3"/>
+                            <constraint firstItem="WjR-hd-H0f" firstAttribute="leading" secondItem="hUc-6f-67m" secondAttribute="trailing" constant="111" id="Nsg-8N-epj"/>
+                            <constraint firstItem="hUc-6f-67m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dSO-if-mzk"/>
+                            <constraint firstItem="A1e-0k-suE" firstAttribute="leading" secondItem="WjR-hd-H0f" secondAttribute="trailing" constant="47" id="hc1-27-DNp"/>
+                            <constraint firstItem="A1e-0k-suE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="l93-eU-aga"/>
+                            <constraint firstItem="A1e-0k-suE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q0D-DI-Gui"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WjR-hd-H0f"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Gcp-jg-vqa"/>
+                                <exclude reference="Nsg-8N-epj"/>
+                                <exclude reference="hc1-27-DNp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="WjR-hd-H0f"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Gcp-jg-vqa"/>
+                                <include reference="Nsg-8N-epj"/>
+                                <include reference="hc1-27-DNp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.15178571428571" y="-218.84057971014494"/>
+        </scene>
+    </scenes>
+</document>
